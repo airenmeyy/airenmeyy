@@ -1,6 +1,5 @@
-<!-- Header with dark gothic flair -->
-<h1 align="center" style="font-family:serif; color:#6e6e6e;">
-Kharisma Fahrun Nisa'
+<h1 align="center">
+   𝕶𝖍𝖆𝖗𝖎𝖘𝖒𝖆 𝕱𝖆𝖍𝖗𝖚𝖓 𝕹𝖎𝖘𝖆 
 </h1>
 
 <p align="center">
