@@ -21,9 +21,9 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/dragon.svg?color_snake=%23D4AF37,%236B4E71,%233B5240&color_dots=%231A1225,%232C263F,%233B5240,%236B4E71,%23D4AF37&color_empty=%230B0B12
-          # ↑ gothic dark palette: void black -> deep purple -> forest -> plum -> gold
-          # this renders as a serpentine creature devouring your contribution squares
+            dist/github-contribution-grid-snake.svg?color_snake=%23D4AF37,%236B4E71,%233B5240&color_dots=%231A1225,%232C263F,%233B5240,%236B4E71,%23D4AF37&color_empty=%230B0B12
+          # ↑ filename matches the <img src> path used in README.md
+          # gothic dark palette: void black -> deep purple -> forest -> plum -> gold
 
       - name: push dragon svg to output branch
         uses: crazy-max/ghaction-github-pages@v4
