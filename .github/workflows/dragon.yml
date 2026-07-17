@@ -1,23 +1,32 @@
-name: Generate Dragon Animation
+name: dragon-devours-contributions
 
 on:
   schedule:
-    - cron: "0 */12 * * *"  # every 12 hours
-  workflow_dispatch:
+    # loops forever — regenerates every 12 hours
+    - cron: "0 */12 * * *"
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  feed-the-dragon:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: Platane/snk@v3
+      - name: generate dragon svg from contribution graph
+        uses: Platane/snk@v3
+        id: dragon
         with:
-          github_user_name: airenmeyy
+          github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-dragon.svg
-            dist/github-dragon-dark.svg?palette=github-dark
-            dist/ocean.gif?color_dragon=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+            dist/dragon.svg?color_snake=%23D4AF37,%236B4E71,%233B5240&color_dots=%231A1225,%232C263F,%233B5240,%236B4E71,%23D4AF37&color_empty=%230B0B12
+          # ↑ gothic dark palette: void black -> deep purple -> forest -> plum -> gold
+          # this renders as a serpentine creature devouring your contribution squares
 
-      - uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: push dragon svg to output branch
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
