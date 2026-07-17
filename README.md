@@ -131,18 +131,6 @@ const runnie = {
 
 <div align="center">
 
-### 🌑 github whispers
-
-<img src="https://github-readme-stats.vercel.app/api?username=airenmeyy&show_icons=true&theme=dark&bg_color=213722&title_color=F8C662&text_color=595082&icon_color=F8C662&border_color=2C263F&hide_border=false&count_private=true" height="150"/>
-&nbsp;&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=airenmeyy&layout=compact&theme=dark&bg_color=2C263F&title_color=F8C662&text_color=595082&border_color=41644A&hide_border=false" height="150"/>
-
-</div>
-
----
-
-<div align="center">
-
 ```
 𓂀  the forest remembers those who code at midnight  𓂀
 ```
